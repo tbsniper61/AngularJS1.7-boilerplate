@@ -1,0 +1,34 @@
+<ons-row class="item" ng-click="Click()">
+  <ons-col width="100px">
+    <img class="shop" ng-src="{{$vm.venue.picture_url}}" />
+  </ons-col>
+  <ons-col>
+    <ons-row class="item-row">
+      <ons-col class="shopTitle">{{ venue.title }}</ons-col>
+    </ons-row>
+    <ons-row class="item-row2">
+      <ons-col width="96px">
+        <div>
+          <div>
+            <span ng-repeat="el in $vm.venue.plus">
+              <img src="img/star_gold.png" height="15px" alt="" />
+            </span>
+            <span ng-repeat="el in venue.minus">
+              <img src="img/star_grey.png" height="15px" alt="" />
+            </span>
+          </div>
+        </div>
+      </ons-col>
+      <ons-col class="info"> {{ venue.reviews }} </ons-col>
+    </ons-row>
+    <ons-row class="item-row3">
+      <ons-col class="street"> {{ venue.place }} </ons-col>
+    </ons-row>
+    <ons-row class="item-row4">
+      <ons-col class="info"> {{ venue.category }} </ons-col>
+    </ons-row>
+  </ons-col>
+  <ons-col width="20px">
+    <img class="chevron" src="img/chevron.png" />
+  </ons-col>
+</ons-row>
