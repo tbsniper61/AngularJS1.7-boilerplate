@@ -1,0 +1,46 @@
+<div layout="column">
+  <md-toolbar ng-if="vm.state == 'noResult'" ng-class="['warning']">
+    <h2 class="md-toolbar-tools" layout="row" layout-align="center center">
+      <span>Oops!</span> no results found
+    </h2>
+  </md-toolbar>
+
+  <md-toolbar ng-if="vm.state == 'loaded'" ng-class="['md-theme-light']">
+    <h2 class="md-toolbar-tools">Places</h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item
+        class="md-3-line md-offset"
+        ng-repeat="venue in vm.venues"
+        ng-click="vm.cellClick(venue.id, $event)"
+      >
+        <img
+          ng-src="{{!venue.picture_url ? 'img/place.png': venue.picture_url}}"
+          alt="{{venue.title}}"
+          class="md-avatar"
+        />
+        <div class="md-list-item-text" style="text-align: left">
+          <div class="title">{{ venue.title }}</div>
+          <div>
+            <div>
+              <span ng-repeat="el in venue.plus">
+                <img src="img/star_gold.png" height="15px" alt="" />
+              </span>
+              <span ng-repeat="el in venue.minus">
+                <img src="img/star_grey.png" height="15px" alt="" />
+              </span>
+            </div>
+            <div class="place">{{ venue.place }}</div>
+          </div>
+          <div class="category">{{ venue.category }}</div>
+        </div>
+        <div class="md-secondary">
+          <img src="img/chevron.png" height="15px" alt="" />
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

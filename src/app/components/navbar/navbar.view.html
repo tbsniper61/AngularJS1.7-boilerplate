@@ -1,0 +1,66 @@
+<md-content flex="none">
+  <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <div layout="row" class="logo-wrap">
+        <md-button
+          class="md-icon-button material-cust-large-button"
+          aria-label="home"
+          ng-click="vm.homeClick()"
+        >
+          <i class="material-icons">home</i>
+        </md-button>
+        <img ng-src="img/place-logo.png" />
+      </div>
+
+      <div flex>
+        <input
+          type="search"
+          class="search"
+          placeholder="Search"
+          ng-model="vm.obj.searchString"
+          ng-change="vm.search()"
+        />
+      </div>
+
+      <md-menu md-position-mode="right target">
+        <md-button
+          aria-label="Open phone interactions menu"
+          class="md-icon-button"
+          ng-click="vm.openMenu($mdMenu, $event)"
+        >
+          <i class="material-icons">filter_list</i>
+        </md-button>
+        <md-menu-content width="4">
+          <md-menu-item>
+            <div layout="row" flex>
+              <md-switch ng-model="vm.records.food" aria-label="food">
+                food
+              </md-switch>
+            </div>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <div layout="row" flex>
+              <md-switch ng-model="vm.records.shops" aria-label="shops">
+                shops
+              </md-switch>
+            </div>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <div layout="row" flex>
+              <md-switch ng-model="vm.records.outdoors" aria-label="outdoors">
+                outdoors
+              </md-switch>
+            </div>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    </div>
+  </md-toolbar>
+  <md-progress-linear
+    ng-show="vm.obj.state === 'loading'"
+    md-mode="indeterminate"
+    class="md-primary md-hue-1"
+  ></md-progress-linear>
+</md-content>

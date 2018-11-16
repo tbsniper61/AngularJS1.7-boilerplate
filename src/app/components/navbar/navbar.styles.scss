@@ -1,0 +1,36 @@
+navbar {
+  .home-heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: #42a5f5;
+  }
+  .home-body {
+    margin-left: -20px;
+    letter-spacing: 5px;
+    color: #00e676;
+  }
+  .material-cust-medium-button {
+    width: 60px !important;
+    height: 60px !important;
+    padding-top: 13px !important;
+    margin-left: -16px !important;
+  }
+  .search {
+    padding: 14px;
+    border-radius: 2px;
+    color: #3a3a3a;
+    width: 90%;
+    border: none;
+    background-color: #f1f2f7;
+  }
+  img {
+    width: 60%;
+    height: 55%;
+  }
+  .logo-wrap {
+    min-width: 100px;
+  }
+}
+md-switch {
+  height: 20px !important;
+}

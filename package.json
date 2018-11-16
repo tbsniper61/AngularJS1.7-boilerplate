@@ -1,7 +1,7 @@
 {
-  "name": "angular-gulp-boilerplate",
+  "name": "foursquare_angularjs",
   "version": "1.0.4",
-  "description": "Clean but full featured AngularJS boilerplate using Gulp workflow and best practices",
+  "description": "Testing Project uisng fourSquare, GoogleMap based on AngularJS1.7",
   "bin": "./cli.js",
   "scripts": {
     "build": "gulp default",
@@ -10,11 +10,17 @@
     "start": "gulp serve",
     "start:dist": "gulp serve:dist",
     "update:bower": "ncu -a -m bower --packageFile bower.json",
-    "update:dev": "ncu -a --packageFile package.json"
+    "update:dev": "ncu -a --packageFile package.json",
+    "test": "karma start karma.conf.js",
+    "//": "Do not install the Firefox driver to work around https://github.com/angular/webdriver-manager/issues/303.",
+    "update-webdriver": "webdriver-manager update --gecko false",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js",
+    "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='../bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1oginov/Angular-Gulp-Boilerplate.git"
+    "url": "git+https://github.com/happinessdev63/4Square-googlemap-AngularJS.git"
   },
   "keywords": [
     "angular",
@@ -45,12 +51,11 @@
     "ugify",
     "watch"
   ],
-  "author": "Danila Loginov <danila@loginov.rocks> (https://loginov.rocks)",
+  "author": "Karan Singh <karandevelop63@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/1oginov/Angular-Gulp-Boilerplate/issues"
+    "url": "https://github.com/happinessdev63/4Square-googlemap-AngularJS/issues"
   },
-  "homepage": "https://github.com/1oginov/Angular-Gulp-Boilerplate",
   "dependencies": {
     "git-clone": "^0.1.0"
   },
@@ -90,6 +95,16 @@
     "gulpdoc": "^1.1.3",
     "main-bower-files": "^2.13.1",
     "npm-check-updates": "^2.14.2",
-    "wiredep": "^4.0.0"
+    "wiredep": "^4.0.0",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^1.1.2",
+    "protractor": "^5.4.1",
+    "angular": "^1.7.5",
+    "angular-loader": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "angular-mocks": "^1.7.5"
   }
 }

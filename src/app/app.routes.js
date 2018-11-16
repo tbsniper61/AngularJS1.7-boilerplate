@@ -6,23 +6,19 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
-        url: '/home',
-        component: 'home'
-      })
       .state('places', {
         url: '/',
-        controller: 'places'
+        component: 'places'
       })
       .state('filter', {
         url: '/filters',
-        controller: 'filters'
+        component: 'filters'
       })
       .state('detail', {
-        url: '/detail/{venueId}',
-        controller: 'detail',
+        url: '/detail',
+        component: 'detail',
         params: {
-          venue: ''
+          venueID: null
         }
       });
 

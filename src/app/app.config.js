@@ -8,6 +8,7 @@
     $locationProvider,
     $logProvider,
     $translateProvider,
+    localStorageServiceProvider,
     tmhDynamicLocaleProvider
   ) {
     $locationProvider.html5Mode(true);
@@ -24,6 +25,11 @@
       .fallbackLanguage('en')
       .useSanitizeValueStrategy('escape')
       .useMissingTranslationHandlerLog();
+
+    localStorageServiceProvider
+      .setPrefix('app')
+      .setStorageType('sessionStorage')
+      .setNotify(true, true);
 
     tmhDynamicLocaleProvider
       // Angular locales pattern used by `buildAngularLocales()` in

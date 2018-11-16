@@ -1,0 +1,14 @@
+<div layout="column">
+  <md-toolbar ng-class="['md-theme-light']">
+    <h2 class="md-toolbar-tools">Google Map Info</h2>
+  </md-toolbar>
+  <md-progress-linear
+    ng-show="vm.state === 'loading'"
+    md-mode="indeterminate"
+    class="md-primary md-hue-3"
+  ></md-progress-linear>
+
+  <div layout="row" layout-align="center center">
+    <div id="map" flex="98"></div>
+  </div>
+</div>

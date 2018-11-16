@@ -1,0 +1,18 @@
+places {
+  md-toolbar {
+    min-height: 40px;
+    height: 40px;
+    &.warning {
+      background-color: #ef6c00;
+      .md-toolbar-tools {
+        font-weight: 800;
+        font-size: 30px;
+        color: #212121;
+      }
+      span {
+        color: #388e3c;
+        margin-right: 15px;
+      }
+    }
+  }
+}

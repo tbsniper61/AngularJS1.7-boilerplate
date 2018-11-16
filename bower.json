@@ -34,9 +34,7 @@
     "ugify",
     "watch"
   ],
-  "authors": [
-    "Danila Loginov <danila@loginov.rocks> (https://loginov.rocks)"
-  ],
+  "authors": ["Danila Loginov <danila@loginov.rocks> (https://loginov.rocks)"],
   "license": "MIT",
   "homepage": "https://github.com/1oginov/Angular-Gulp-Boilerplate",
   "dependencies": {
@@ -48,6 +46,8 @@
     "angular-translate-loader-static-files": "^2.18.1",
     "angular-ui-router": "^1.0.20",
     "normalize-css": "^8.0.0",
-    "onsenui": "^2.10.5"
+    "angular-local-storage": "^0.7.1",
+    "ngstorage": "^0.3.11",
+    "angular-material": "^1.1.10"
   }
 }

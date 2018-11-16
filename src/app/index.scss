@@ -6,6 +6,17 @@ body {
   font: normal 16px/150% Arial, Helvetica, sans-serif;
 }
 
+.toolbardemoBasicUsage md-toolbar .md-button.md-icon-button .favorite-icon {
+  fill: #de3641;
+}
+
+.toolbardemoBasicUsage md-toolbar md-toolbar-filler {
+  background-color: #e0e0e0;
+}
+.toolbardemoBasicUsage md-toolbar md-toolbar-filler #filler-icon {
+  fill: #4c9ef1;
+}
+
 // inject
 // Input styles will be imported here after Gulp `styles` task.
 // endinject
